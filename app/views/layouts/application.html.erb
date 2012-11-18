@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tealog</title>
+  <%= stylesheet_link_tag    "tea", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="main">
+<%= yield %>
+</div>
+
+</body>
+</html>

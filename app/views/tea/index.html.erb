@@ -1,0 +1,40 @@
+<%= form_for @tea, :url => { :action => "create" } do |t| %>
+  <%= t.label(:name, "Name") %>
+  <%= t.text_field(:name) %><br />
+  <%= t.label(:company, "Company") %>
+  <%= t.text_field(:company) %><br />
+  <%= t.label(:description, "Description") %>
+  <%= text_area_tag(:description) %><br /><br />
+
+  <%= t.label(:black, "Black") %>
+  <%= t.radio_button(:tea_type, "Black") %><br />
+  <%= t.label(:oolong, "Oolong") %>
+  <%= t.radio_button(:tea_type, "Oolong") %><br />
+  <%= t.label(:green, "Green") %>
+  <%= t.radio_button(:tea_type, "Green") %><br />
+  <%= t.label(:white, "White") %>
+  <%= t.radio_button(:tea_type, "White") %><br />
+  <%= t.label(:puerh, "Puerh") %>
+  <%= t.radio_button(:tea_type, "Puerh") %><br /><br />
+
+  <%= t.label(:rating, "Rating") %>
+  <%= t.range_field(:rating) %><br />
+  <%= t.label(:photo_url, "Photo") %>
+  <%= t.text_field(:photo_url) %><br />
+  <%= t.label(:origin, "Origin") %>
+  <%= t.text_field(:origin) %><br />
+  <%= t.label(:store_url, "Buy URL") %>
+  <%= t.url_field(:store_url) %><br />
+
+  <%= t.submit "Create" %><br /><br />
+<% end %>
+
+<% @teas.each do |t| %>
+  <div class="entry">
+    <%= image_tag t.photo_url %>
+    <ul class="entry">
+      <li>Name: <%= link_to(t.name, tea_path(t)) %></li>
+      <li>Company: <%= t.company %></li>
+    </ul>
+  </div>
+<% end %>
