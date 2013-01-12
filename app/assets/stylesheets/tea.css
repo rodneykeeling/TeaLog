@@ -302,6 +302,7 @@ div#all-teas h3 {
 div.entry {
   float: left;
   padding: 10px;
+  margin: 0 9px 9px 0;
   background: #E6E6E6;
   border: 1px solid #D9D9D9;
   -webkit-border-radius: 7px;

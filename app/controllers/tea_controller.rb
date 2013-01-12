@@ -16,4 +16,14 @@ class TeaController < ApplicationController
       raise ActionController::RoutingError.new('Not Found')
     end
   end
+
+  def destroy
+    @tea = Tea.find(params[:id])
+    @tea.destroy
+
+    respond_to do |format|
+      format.html { redirect_to "/" }
+      format.json { head :no_content }
+    end
+  end
 end

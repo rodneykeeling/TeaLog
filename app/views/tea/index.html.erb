@@ -63,7 +63,7 @@
     <div class="entry">
       <span class="tea_title"><%= link_to(t.name, tea_path(t)) + ' from ' + link_to(t.company, t.store_url) %></span>
       <br />
-      <%= image_tag t.photo_url %>
+      <%= link_to(image_tag(t.photo_url), tea_path(t)) %>
       </ul>
     </div>
   <% end %>

@@ -1,17 +1,18 @@
   <div class="entry">
     <%= image_tag @tea.photo_url %>
-    <ul class="entry">
-      <li>Name: <%= @tea.name %></li>
-      <li>Company: <%= @tea.company %></li>
-      <li>Description: <%= @tea.description %></li>
-      <li>Type: <%= @tea.tea_type %></li>
-      <li>Rating: <%= @tea.rating %></li>
-      <li>Origin: <%= @tea.origin %></li>
-      <li># of times made: <%= @tea.drink_frequency %></li>
-      <li>Store URL: <%= @tea.store_url %></li>
-      <li>Steep Time: <%= @tea.steep_time %></li>
-      <li>Steep Temperature: <%= @tea.steep_temperature %></li>
-      <li>Steep Amount: <%= @tea.steep_amount %></li>
-      <li>Metadata: <%= @tea.metadata %></li>
-    </ul>
+    <div class="tea_info">
+      Name: <%= @tea.name %><br />
+      Company: <%= @tea.company %><br />
+      Description: <%= @tea.description %><br />
+      Type: <%= @tea.tea_type %><br />
+      Rating: <%= @tea.rating %><br />
+      Origin: <%= @tea.origin %><br />
+      # of times made: <%= @tea.drink_frequency %><br />
+      Store URL: <%= @tea.store_url %><br />
+      Steep Time: <%= @tea.steep_time %><br />
+      Steep Temperature: <%= @tea.steep_temperature %><br />
+      Steep Amount: <%= @tea.steep_amount %><br />
+      Metadata: <%= @tea.metadata %><br />
+    </div>
+    <span id="delete"><%= link_to 'Destroy', @tea, :confirm => "Are you sure?", method: :delete %></span>
   </div>
