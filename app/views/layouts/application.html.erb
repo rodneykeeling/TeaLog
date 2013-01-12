@@ -7,14 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <img src="<%= asset_path "logo.png" %>" alt="" id="logo" />
+    <h1 id="logo"><a href="/">TeaLog</a></h1>
+  </header>
 
-<header>
-<img src="<%= asset_path "logo.png" %>" alt="" id="logo" />
-<h1 id="logo"><a href="/">TeaLog</a></h1>
-</header>
-<div id="main">
-<%= yield %>
-</div>
+  <div id="main">
+    <%= yield %>
+  </div>
 
+  <footer>
+    <p>TeaLog &copy; 2013 Rodney Keeling</p>
+  </footer>
 </body>
 </html>

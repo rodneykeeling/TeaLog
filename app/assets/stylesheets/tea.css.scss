@@ -164,9 +164,15 @@ button {  width: auto; overflow: visible; }
   font-weight: normal;
   font-style: normal; }
 
+html {
+  position:relative;
+  min-height: 100%;
+}
+
 body {
   background: $white;
   width: 100%;
+  margin: 0 0 100px;
   font-family:"museosans", sans-serif;
   font-size:14px;
   color:$brown;
@@ -247,6 +253,7 @@ div#all-teas {
   width:980px;
   float:left;
   margin-top:40px;
+  margin-bottom:120px;
 }
 
 div#all-teas h3 {
@@ -287,7 +294,14 @@ textarea {
   margin-bottom: 10px;
 }
 
-label {
-  width: 200px; /* DOES NOT WORK! */
+footer {
+  position:absolute;
+  left:50%;
+  margin-left:-490px;
+  padding:20px;
+  bottom:0;
+  height:20px;
+  width:980px;
+  background:url('border.png') repeat-x 0 0;
+  text-align:center;
 }
-
