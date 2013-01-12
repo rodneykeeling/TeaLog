@@ -1,40 +1,70 @@
-<%= form_for @tea, :url => { :action => "create" } do |t| %>
-  <%= t.label(:name, "Name") %>
-  <%= t.text_field(:name) %><br />
-  <%= t.label(:company, "Company") %>
-  <%= t.text_field(:company) %><br />
-  <%= t.label(:description, "Description") %>
-  <%= text_area_tag(:description) %><br /><br />
+<h3>Add new tea</h3>
+<div id="new-tea">
+  <%= form_for @tea, :url => { :action => "create" } do |t| %>
+    <div id="tea_one">
+      <div id="tea_name_set">
+        <%= t.label(:name, "Name") %>
+        <br />
+        <%= t.text_field(:name) %><br />
+      </div>
 
-  <%= t.label(:black, "Black") %>
-  <%= t.radio_button(:tea_type, "Black") %><br />
-  <%= t.label(:oolong, "Oolong") %>
-  <%= t.radio_button(:tea_type, "Oolong") %><br />
-  <%= t.label(:green, "Green") %>
-  <%= t.radio_button(:tea_type, "Green") %><br />
-  <%= t.label(:white, "White") %>
-  <%= t.radio_button(:tea_type, "White") %><br />
-  <%= t.label(:puerh, "Puerh") %>
-  <%= t.radio_button(:tea_type, "Puerh") %><br /><br />
+      <div id="tea_company_set">
+        <%= t.label(:company, "Company") %>
+        <br />
+        <%= t.text_field(:company) %><br />
+      </div>
 
-  <%= t.label(:rating, "Rating") %>
-  <%= t.range_field(:rating) %><br />
-  <%= t.label(:photo_url, "Photo") %>
-  <%= t.text_field(:photo_url) %><br />
-  <%= t.label(:origin, "Origin") %>
-  <%= t.text_field(:origin) %><br />
-  <%= t.label(:store_url, "Buy URL") %>
-  <%= t.url_field(:store_url) %><br />
+      <div id="tea_description_set">
+        <%= t.label(:description, "Description") %>
+        <br />
+        <%= text_area_tag(:description) %><br />
+      </div>
+    </div>
 
-  <%= t.submit "Create" %><br /><br />
-<% end %>
+    <div id="tea_two">
+      <div id="tea_type_set">
+        <%= t.label(:tea_type, "Tea Type") %>
+        <br />
+        <%= t.select(:tea_type, "<option>white</option><option>green</option><option>oolong</option><option>black</option><option>puerh</option>".html_safe) %>
+      </div>
 
-<% @teas.each do |t| %>
-  <div class="entry">
-    <%= image_tag t.photo_url %>
-    <ul class="entry">
-      <li>Name: <%= link_to(t.name, tea_path(t)) %></li>
-      <li>Company: <%= t.company %></li>
-    </ul>
-  </div>
-<% end %>
+      <div id="tea_rating_set">
+        <%= t.label(:rating, "Rating") %>
+        <br />
+        <%= t.range_field(:rating) %><br />
+      </div>
+
+      <div id="tea_photo_set">
+        <%= t.label(:photo_url, "Photo") %>
+        <br />
+        <%= t.text_field(:photo_url) %><br />
+      </div>
+
+      <div id="tea_origin_set">
+        <%= t.label(:origin, "Origin") %>
+        <br />
+        <%= t.text_field(:origin) %><br />
+      </div>
+
+      <div id="tea_store_set">
+        <%= t.label(:store_url, "Buy URL") %>
+        <br />
+        <%= t.url_field(:store_url) %><br />
+      </div>
+
+      <%= t.submit "Create" %><br /><br />
+    </div>
+  <% end %>
+</div>
+
+<div id="all-teas">
+  <h3>All Teas</h3>
+  <% @teas.each do |t| %>
+    <div class="entry">
+      <span class="tea_title"><%= link_to(t.name, tea_path(t)) + ' from ' + link_to(t.company, t.store_url) %></span>
+      <br />
+      <%= image_tag t.photo_url %>
+      </ul>
+    </div>
+  <% end %>
+</div>

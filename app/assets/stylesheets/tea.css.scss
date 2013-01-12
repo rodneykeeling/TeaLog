@@ -91,9 +91,6 @@ html { overflow-y: scroll; }
 /* accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active { outline: none; }
 
-a, a:active, a:visited { color: #607890; }
-a:hover { color: #036; }
-
 ul, ol { margin-left: 2em; }
 ol { list-style-type: decimal; }
 
@@ -142,8 +139,8 @@ input:invalid, textarea:invalid {
 /* These selection declarations have to be separate.
  *   No text-shadow: twitter.com/miketaylr/status/12228805301
  *     Also: hot pink. */
-::-moz-selection{ background: #576A9F; color:#fff; text-shadow: none; }
-::selection { background:#576A9F; color:#fff; text-shadow: none; }
+::-moz-selection{ background: $brown; color:#fff; text-shadow: none; }
+::selection { background:$brown; color:#fff; text-shadow: none; }
 /*  j.mp/webkit-tap-highlight-color */
 a:link { -webkit-tap-highlight-color: #576A9F; }
 
@@ -176,20 +173,48 @@ body {
 }
 
 a {
-  color:$brown;
+  color:$dark_green;
   text-decoration:none;
 }
 
 a:hover {
+  color:$brown;
   text-decoration:underline;
+}
+
+h2 {
+  font-size:1.8em;
+}
+
+h3 {
+  font-size:1.6em;
+}
+
+h4 {
+  font-size:1.4em;
+}
+
+h5 {
+  font-size:1.2em;
 }
 
 h1#logo {
   font-size:2em;
+  color:$brown;
   display:inline;
   position:absolute;
   top:10px;
   left:70px;
+}
+
+h1#logo a {
+  color:$brown;
+  text-decoration: none;
+}
+
+h1#logo a:hover {
+  text-decoration:none;
+  color:$light_green;
 }
 
 img#logo {
@@ -198,15 +223,54 @@ img#logo {
   left:6px;
 }
 
-#main, header {
+#main {
   width:980px;
   margin:5px auto;
 }
 
 header {
-  height:70px;
+  width:1000px;
+  height:60px;
+  margin:5px auto;
   position:relative;
   background:url('border.png') repeat-x 0 50px;
+}
+
+/* NEW-TEA FORM */
+
+div#new-tea {
+  width:980px;
+  margin-bottom:40px;
+}
+
+div#all-teas {
+  width:980px;
+  float:left;
+  margin-top:40px;
+}
+
+div#all-teas h3 {
+  margin-bottom:20px;
+}
+
+div.entry {
+  float:left;
+  padding:10px;
+  background: #E6E6E6;
+  border:1px solid #D9D9D9;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
+
+div.entry span.tea_title {
+  display:block;
+  height:7px;
+}
+
+div#tea_one, div#tea_two {
+  float:left;
+  margin-right:20px;
 }
 
 /* FORM COMPONENTS */
