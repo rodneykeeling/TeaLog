@@ -337,6 +337,10 @@ div.entry, div.tea_entry {
 div.tea_entry {
   margin-bottom: 120px; }
 
+div.entry img, div.tea_entry img {
+  height: 343px;
+  width: 459px; }
+
 div.entry span.tea_title {
   display: block;
   height: 7px; }
@@ -349,14 +353,46 @@ div#tea_one, div#tea_two {
   margin-right: 20px; }
 
 /* FORM COMPONENTS */
-input[type=text], input[type=url] {
+input[type=text], input[type=url], input[type=range] {
   width: 200px;
-  margin-bottom: 10px; }
+  height: 18px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #e8e8e8; }
 
 textarea {
   width: 200px;
-  height: 100px;
-  margin-bottom: 10px; }
+  height: 118px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #e8e8e8; }
+
+select {
+  width: 210px;
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  -webkit-appearance: none;
+  /* remove the strong OSX influence from Webkit */
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px; }
+
+input[type=submit] {
+  width: 70px;
+  height: 30px;
+  background: #fff;
+  color: #604848;
+  border: 1px solid #604848; }
+
+input[type=submit]:active {
+  color: #789048; }
+
+input[type=text]:focus, input[type=url]:focus, textarea:focus {
+  border: 1px solid #789048;
+  outline: none; }
 
 footer {
   position: absolute;
