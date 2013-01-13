@@ -2,10 +2,12 @@ class TeaController < ApplicationController
   def index
     @teas = Tea.all
     @tea = Tea.new
+    @title = 'Home'
   end
 
   def show
     @tea = Tea.find(params[:id])
+    @title = @tea.name
   end
 
   def create
@@ -15,6 +17,8 @@ class TeaController < ApplicationController
     else
       raise ActionController::RoutingError.new('Not Found')
     end
+
+    @title = 'New Tea'
   end
 
   def destroy
@@ -48,6 +52,7 @@ class TeaController < ApplicationController
     end
 
     @count = @results.count
+    @title = 'Search'
   end
 
 end

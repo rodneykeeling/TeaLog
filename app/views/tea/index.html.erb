@@ -55,7 +55,7 @@
       <div id="tea_type_set">
         <%= t.label(:tea_type, "Tea type") %>
         <br />
-        <%= t.select(:tea_type, "<option>White</option><option>Green</option><option>Oolong</option><option>Black</option><option>Puerh</option>".html_safe) %>
+        <%= t.select(:tea_type, "<option>White</option><option>Yellow</option><option>Green</option><option>Oolong</option><option>Black</option><option>Puerh</option><option>Chai</option>".html_safe) %>
       </div>
 
       <div id="tea_rating_set">
@@ -85,11 +85,11 @@
 
     <div id="tea_three">
       <div id="tea_store_set">
-        <%= t.label(:steep_temperature, "Steep Temperature") %>
+        <%= t.label(:steep_temperature, "Steep Temperature (°F)") %>
         <br />
         <%= t.text_field(:steep_temperature) %><br />
       <div id="tea_store_set">
-        <%= t.label(:steep_time, "Steep Time") %>
+        <%= t.label(:steep_time, "Steep Time (min)") %>
         <br />
         <%= t.text_field(:steep_time) %><br />
       </div>

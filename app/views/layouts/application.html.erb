@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tealog</title>
+  <title>Tealog | <%= @title %> </title>
   <%= stylesheet_link_tag    "tea", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -21,7 +21,7 @@
   </div>
 
   <footer>
-    <p>TeaLog &copy; 2013 Rodney Keeling</p>
+  <p>TeaLog &copy; 2013 <a href="http://www.rodneykeeling.com">Rodney Keeling</a></p>
   </footer>
 </body>
 </html>
