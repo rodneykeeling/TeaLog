@@ -1,20 +1,25 @@
 <% content_for :head do %>
   <script type="text/javascript">
+
     /* handle slider value change */
-    $("#tea_rating").mouseup(function() {
-        alert("hi");
+    $("#tea_rating").live('change', function() {
         var rangeVal = $("#tea_rating").val();
-        $("span#raing").html(rangeVal);
+        $("span#rating").html(rangeVal);
     });
 
     /* input form slider */
     $("#tea-dropdown").live('click', function() {
-        if ($('div#new-tea').is(":hidden")) {
-            $("#tea-dropdown").css("background", "url('assets/dropdown-click.png')");
-            $("div#new-tea").slideDown('slow');
+        /* caching for performance */
+        var new_tea = $("div#new-tea")
+        var tea_dropdown = $("#tea-dropdown");
+        if (new_tea.is(":hidden")) {
+            tea_dropdown.css("background", "url('assets/dropdown-click.png')");
+            new_tea.slideDown('slow');
+            $("div#border-line").hide();
         } else {
-            $("#tea-dropdown").css("background", "url('assets/dropdown.png')");
-            $("div#new-tea").slideUp('slow');
+            new_tea.slideUp("slow");
+            tea_dropdown.css("background", "url('assets/dropdown.png')");
+            $("div#border-line").show();
         }
     });
   </script>
@@ -52,9 +57,9 @@
       </div>
 
       <div id="tea_rating_set">
-        <%= t.label(:rating, "Rating: ") %><span id="rating"></span>
+        <%= t.label(:rating, "Rating: ") %><span id="rating">70</span>
         <br />
-        <%= t.range_field(:rating, :step => 10) %><br />
+        <%= t.range_field(:rating, :step => 10, :value => 70) %><br />
       </div>
 
       <div id="tea_photo_set">

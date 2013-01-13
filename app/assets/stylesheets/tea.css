@@ -294,7 +294,7 @@ header {
 #border-line {
   width: 980px;
   height: 5px;
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
   background: url("border.png") repeat-x 0 0; }
 
 /* NEW-TEA FORM */
