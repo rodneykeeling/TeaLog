@@ -81,7 +81,19 @@
         <br />
         <%= t.url_field(:store_url) %><br />
       </div>
+    </div>
 
+    <div id="tea_three">
+      <div id="tea_store_set">
+        <%= t.label(:steep_temperature, "Steep Temperature") %>
+        <br />
+        <%= t.text_field(:steep_temperature) %><br />
+      <div id="tea_store_set">
+        <%= t.label(:steep_time, "Steep Time") %>
+        <br />
+        <%= t.text_field(:steep_time) %><br />
+      </div>
+    </div>
     </div>
   <% end %>
 </div>
