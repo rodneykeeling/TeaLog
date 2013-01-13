@@ -26,4 +26,22 @@ class TeaController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def search
+    term = params[:term]
+    case
+    when term.match(/^company:/)
+      term.slice!('company:')
+      @results = Tea.where("lower(company) = ?", term.strip.downcase)
+    when term.match(/type:/)
+      term.slice!('type:')
+      @results = Tea.where("lower(tea_type) = ?", term.strip.downcase)
+    else
+      @results = Tea.where("lower(name) = ? OR lower(company) = ? OR lower(tea_type) = ? OR lower(origin) = ?", 
+                            params[:term].downcase, params[:term].downcase, params[:term].downcase, params[:term].downcase)
+    end
+
+    @count = @results.count
+  end
+
 end

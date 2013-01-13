@@ -1,6 +1,8 @@
 Tealog::Application.routes.draw do
   get "/" => "tea#index"
   get "tea/:id" => "tea#show", :as => :tea
+  get "search/" => "tea#search"
+
   delete "tea/:id" => "tea#destroy"
 
   post "tea/create" => "tea#create"

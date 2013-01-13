@@ -407,3 +407,8 @@ footer {
   width: 980px;
   background: url("border.png") repeat-x 0 0;
   text-align: center; }
+
+input#term {
+  position: absolute;
+  top: 7px;
+  right: 0; }

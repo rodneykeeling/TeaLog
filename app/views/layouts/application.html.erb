@@ -9,8 +9,11 @@
 </head>
 <body>
   <header>
-  <a href="/"><img src="<%= asset_path "logo.png" %>" alt="Logo" id="logo" /></a>
+    <a href="/"><img src="<%= asset_path "logo.png" %>" alt="Logo" id="logo" /></a>
     <h1 id="logo"><a href="/">TeaLog</a></h1>
+    <%= form_tag("/search", method: :get) do %>
+      <%= text_field_tag(:term, nil, placeholder: "Search") %>
+    <% end %>
   </header>
 
   <div id="main">
