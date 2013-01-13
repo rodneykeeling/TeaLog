@@ -328,7 +328,7 @@ input[type=text], input[type=url], input[type=range] {
 
 textarea {
   width: 200px;
-  height: 118px;
+  height: 130px;
   padding:5px;
   margin-bottom: 10px;
   border:1px solid #e8e8e8;
@@ -339,9 +339,9 @@ select {
   height:30px;
   padding:5px;
   margin-bottom:10px;
-  background:#fff;
+  background:url('downarrow.png') 190px 50% no-repeat #fff;
   border:1px solid #e8e8e8;
-  -webkit-appearance:none; /* remove the strong OSX influence from Webkit */
+  -webkit-appearance:none; 
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   border-radius: 0px;
@@ -357,6 +357,11 @@ input[type=submit] {
 
 input[type=submit]:active {
   color:$light_green;
+}
+
+input[type=range] {
+  padding:0;
+  width:210px;
 }
 
 input[type=text]:focus, input[type=url]:focus, textarea:focus {

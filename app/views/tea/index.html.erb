@@ -53,7 +53,7 @@
 
     <div id="tea_two">
       <div id="tea_type_set">
-        <%= t.label(:tea_type, "Tea Type") %>
+        <%= t.label(:tea_type, "Tea type") %>
         <br />
         <%= t.select(:tea_type, "<option>white</option><option>green</option><option>oolong</option><option>black</option><option>puerh</option>".html_safe) %>
       </div>
@@ -61,11 +61,11 @@
       <div id="tea_rating_set">
         <%= t.label(:rating, "Rating: ") %><span id="rating">70</span>
         <br />
-        <%= t.range_field(:rating, :step => 10, :value => 70) %><br />
+        <%= t.range_field(:rating, :step => 5, :value => 70) %><br />
       </div>
 
       <div id="tea_photo_set">
-        <%= t.label(:photo_url, "Photo") %>
+        <%= t.label(:photo_url, "Photo (url)") %>
         <br />
         <%= t.text_field(:photo_url) %><br />
       </div>
@@ -77,7 +77,7 @@
       </div>
 
       <div id="tea_store_set">
-        <%= t.label(:store_url, "Buy URL") %>
+        <%= t.label(:store_url, "Buy online (url)") %>
         <br />
         <%= t.url_field(:store_url) %><br />
       </div>
