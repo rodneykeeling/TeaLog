@@ -5,10 +5,11 @@
   <%= stylesheet_link_tag    "tea", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <%= yield :head %>
 </head>
 <body>
   <header>
-    <img src="<%= asset_path "logo.png" %>" alt="" id="logo" />
+  <a href="/"><img src="<%= asset_path "logo.png" %>" alt="Logo" id="logo" /></a>
     <h1 id="logo"><a href="/">TeaLog</a></h1>
   </header>
 

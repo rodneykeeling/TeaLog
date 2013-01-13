@@ -1,4 +1,27 @@
-<h3>Add new tea</h3>
+<% content_for :head do %>
+  <script type="text/javascript">
+    /* handle slider value change */
+    $("#tea_rating").mouseup(function() {
+        alert("hi");
+        var rangeVal = $("#tea_rating").val();
+        $("span#raing").html(rangeVal);
+    });
+
+    /* input form slider */
+    $("#tea-dropdown").live('click', function() {
+        if ($('div#new-tea').is(":hidden")) {
+            $("#tea-dropdown").css("background", "url('assets/dropdown-click.png')");
+            $("div#new-tea").slideDown('slow');
+        } else {
+            $("#tea-dropdown").css("background", "url('assets/dropdown.png')");
+            $("div#new-tea").slideUp('slow');
+        }
+    });
+  </script>
+<% end %>
+
+<h3 id="add-new-tea">Add new tea</h3>
+<div id="tea-dropdown"></div>
 <div id="new-tea">
   <%= form_for @tea, :url => { :action => "create" } do |t| %>
     <div id="tea_one">
@@ -29,9 +52,9 @@
       </div>
 
       <div id="tea_rating_set">
-        <%= t.label(:rating, "Rating") %>
+        <%= t.label(:rating, "Rating: ") %><span id="rating"></span>
         <br />
-        <%= t.range_field(:rating) %><br />
+        <%= t.range_field(:rating, :step => 10) %><br />
       </div>
 
       <div id="tea_photo_set">
@@ -56,6 +79,7 @@
     </div>
   <% end %>
 </div>
+<div id="border-line"></div>
 
 <div id="all-teas">
   <h3>All Teas</h3>

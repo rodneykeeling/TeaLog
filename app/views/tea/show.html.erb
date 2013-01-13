@@ -1,4 +1,4 @@
-  <div class="entry">
+  <div class="tea_entry">
     <%= image_tag @tea.photo_url %>
     <div class="tea_info">
       Name: <%= @tea.name %><br />
@@ -14,5 +14,6 @@
       Steep Amount: <%= @tea.steep_amount %><br />
       Metadata: <%= @tea.metadata %><br />
     </div>
+    <br />
     <span id="delete"><%= link_to 'Delete', @tea, :confirm => "Are you sure?", method: :delete %></span>
   </div>

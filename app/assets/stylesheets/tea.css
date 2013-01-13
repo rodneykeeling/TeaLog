@@ -291,21 +291,40 @@ header {
   position: relative;
   background: url("border.png") repeat-x 0 50px; }
 
+#border-line {
+  width: 980px;
+  height: 5px;
+  margin-top: 10px;
+  background: url("border.png") repeat-x 0 0; }
+
 /* NEW-TEA FORM */
+h3#add-new-tea {
+  display: inline;
+  vertical-align: top;
+  margin-right: 5px; }
+
+div#tea-dropdown {
+  display: inline-block;
+  cursor: pointer;
+  background: url("dropdown.png");
+  width: 32px;
+  height: 32px; }
+
 div#new-tea {
   width: 980px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  display: none; }
 
 div#all-teas {
   width: 980px;
   float: left;
-  margin-top: 40px;
+  margin-top: 20px;
   margin-bottom: 120px; }
 
 div#all-teas h3 {
   margin-bottom: 20px; }
 
-div.entry {
+div.entry, div.tea_entry {
   float: left;
   padding: 10px;
   margin: 0 9px 9px 0;
@@ -315,9 +334,15 @@ div.entry {
   -moz-border-radius: 7px;
   border-radius: 7px; }
 
+div.tea_entry {
+  margin-bottom: 120px; }
+
 div.entry span.tea_title {
   display: block;
   height: 7px; }
+
+span#delete a {
+  color: red; }
 
 div#tea_one, div#tea_two {
   float: left;
