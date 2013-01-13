@@ -6,12 +6,34 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :head %>
+  <script type="text/javascript">
+    $("input#term").live("keyup", function() {
+        var term = $(this);
+        var span = $("span#search_highlight");
+        if (term.val().indexOf("type: ") !== -1) {
+            span.text("type:");
+            span.show();
+            term.css("padding-left", "16px");
+            term.css("width", "189px");
+        } else if (term.val().indexOf("name: ") !== -1) {
+            span.text("name:");
+            span.show();
+            term.css("padding-left", "16px");
+            term.css("width", "189px");
+        } else {
+            span.hide();
+            term.css("padding-left", "5px");
+            term.css("width", "200px");
+        }
+    });
+  </script>
 </head>
 <body>
   <header>
     <a href="/"><img src="<%= asset_path "logo.png" %>" alt="Logo" id="logo" /></a>
     <h1 id="logo"><a href="/">TeaLog</a></h1>
     <%= form_tag("/search", method: :get) do %>
+      <span id="search_highlight"></span>
       <%= text_field_tag(:term, nil, placeholder: "Search") %>
     <% end %>
   </header>
