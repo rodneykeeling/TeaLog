@@ -36,6 +36,12 @@ class TeaController < ApplicationController
     when term.match(/type:/)
       term.slice!('type:')
       @results = Tea.where("lower(tea_type) = ?", term.strip.downcase)
+    when term.match(/name:/)
+      term.slice!('name:')
+      @results = Tea.where("lower(name) = ?", term.strip.downcase)
+    when term.match(/origin:/)
+      term.slice!('origin:')
+      @results = Tea.where("lower(origin) = ?", term.strip.downcase)
     else
       @results = Tea.where("lower(name) = ? OR lower(company) = ? OR lower(tea_type) = ? OR lower(origin) = ?", 
                             params[:term].downcase, params[:term].downcase, params[:term].downcase, params[:term].downcase)

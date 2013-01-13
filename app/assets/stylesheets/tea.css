@@ -353,6 +353,9 @@ div#tea_one, div#tea_two {
   margin-right: 20px; }
 
 /* FORM COMPONENTS */
+input[type=text], input[type=url], textarea {
+  color: #444; }
+
 input[type=text], input[type=url], input[type=range] {
   width: 200px;
   height: 18px;

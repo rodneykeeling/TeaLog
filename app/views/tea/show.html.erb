@@ -5,15 +5,13 @@
       Company: <%= @tea.company %><br />
       Description: <%= @tea.description %><br />
       Type: <%= @tea.tea_type %><br />
-      Rating: <%= @tea.rating %><br />
+      Rating: <%= @tea.rating %>/100<br />
       Origin: <%= @tea.origin %><br />
-      # of times made: <%= @tea.drink_frequency %><br />
-      Store URL: <%= @tea.store_url %><br />
-      Steep Time: <%= @tea.steep_time %><br />
-      Steep Temperature: <%= @tea.steep_temperature %><br />
-      Steep Amount: <%= @tea.steep_amount %><br />
-      Metadata: <%= @tea.metadata %><br />
+      Steep Time: <%= @tea.steep_time %> minutes<br />
+      Steep Temperature: <%= @tea.steep_temperature %>&#176;F<br />
     </div>
     <br />
+    <a href="<%= @tea.store_url %>" class="buy_here">Buy Here</a>
+    <br /><br />
     <span id="delete"><%= link_to 'Delete', @tea, :confirm => "Are you sure?", method: :delete %></span>
   </div>
