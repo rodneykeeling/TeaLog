@@ -13,10 +13,15 @@ TeaLog
 
 #### Installation
 <code>git clone https://github.com/rodneykeeling/TeaLog</code>
+
 <code>cd TeaLog</code>
+
 <code>bundle install</code>
+
 <code>bundle exec rake db:migrate</code>
+
 <code>rails s</code>
+
 
 And go to localhost:3000 to begin!
 
