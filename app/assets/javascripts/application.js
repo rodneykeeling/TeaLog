@@ -46,3 +46,25 @@ $("input#term").live("keyup", function() {
     }
 });
 
+/* handle slider value change */
+    $("#tea_rating").live('change', function() {
+        var rangeVal = $("#tea_rating").val();
+        $("span#rating").html(rangeVal);
+    });
+
+    /* input form slider */
+    $("#tea-dropdown").live('click', function() {
+        /* caching for performance */
+        var new_tea = $("div#new-tea")
+        var tea_dropdown = $("#tea-dropdown");
+        if (new_tea.is(":hidden")) {
+            tea_dropdown.css("background", "url('assets/dropdown-click.png')");
+            new_tea.slideDown('slow');
+            $("div#border-line").hide();
+        } else {
+            new_tea.slideUp("slow");
+            tea_dropdown.css("background", "url('assets/dropdown.png')");
+            $("div#border-line").show();
+        }
+    });
+

@@ -4,7 +4,7 @@ TeaLog
 ![Screenshot](http://i.imgur.com/ArLJ3.png)
 
 #### Features
-* Search function with filters for name, company, origin, and type:
+* Search function with filters for name, company, origin, and type. Just type one of the filters with a colon, hit space, and it'll pop-up:
 
 ![Search](http://i.imgur.com/0YHX1.png)
 
