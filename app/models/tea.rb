@@ -8,5 +8,7 @@ class Tea < ActiveRecord::Base
                   :photo_url,
                   :rating,
                   :store_url,
-                  :tea_type
+                  :tea_type,
+                  :steep_temperature,
+                  :steep_time
 end

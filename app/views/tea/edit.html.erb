@@ -1,0 +1,68 @@
+  <%= form_for @tea, :url => { :action => "update" } do |t| %>
+    <div id="tea_one">
+      <div id="tea_name_set">
+        <%= t.label(:name, "Name") %>
+        <br />
+        <%= t.text_field(:name) %><br />
+      </div>
+
+      <div id="tea_company_set">
+        <%= t.label(:company, "Company") %>
+        <br />
+        <%= t.text_field(:company) %><br />
+      </div>
+
+      <div id="tea_description_set">
+        <%= t.label(:description, "Description") %>
+        <br />
+        <%= text_area_tag(:description) %><br />
+      </div>
+
+      <%= t.submit "Update" %><br /><br />
+    </div>
+
+    <div id="tea_two">
+      <div id="tea_type_set">
+        <%= t.label(:tea_type, "Tea type") %>
+        <br />
+        <%= t.select(:tea_type, "<option>White</option><option>Yellow</option><option>Green</option><option>Oolong</option><option>Black</option><option>Puerh</option><option>Chai</option>".html_safe) %>
+      </div>
+
+      <div id="tea_rating_set">
+        <%= t.label(:rating, "Rating: ") %><span id="rating">70</span>
+        <br />
+        <%= t.range_field(:rating, :step => 5, :value => 70) %><br />
+      </div>
+
+      <div id="tea_photo_set">
+        <%= t.label(:photo_url, "Photo (url)") %>
+        <br />
+        <%= t.text_field(:photo_url) %><br />
+      </div>
+
+      <div id="tea_origin_set">
+        <%= t.label(:origin, "Origin") %>
+        <br />
+        <%= t.text_field(:origin) %><br />
+      </div>
+
+      <div id="tea_store_set">
+        <%= t.label(:store_url, "Buy online (url)") %>
+        <br />
+        <%= t.url_field(:store_url) %><br />
+      </div>
+    </div>
+
+    <div id="tea_three">
+      <div id="tea_store_set">
+        <%= t.label(:steep_temperature, "Steep Temperature (°F)") %>
+        <br />
+        <%= t.text_field(:steep_temperature) %><br />
+        <div id="tea_store_set">
+          <%= t.label(:steep_time, "Steep Time (min)") %>
+          <br />
+          <%= t.text_field(:steep_time) %><br />
+        </div>
+      </div>
+    </div>
+  <% end %>

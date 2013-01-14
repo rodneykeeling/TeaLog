@@ -2,10 +2,13 @@ Tealog::Application.routes.draw do
   get "/" => "tea#index"
   get "tea/:id" => "tea#show", :as => :tea
   get "search/" => "tea#search"
+  get "edit/:id" => "tea#edit"
+
+  put "update/:id" => "tea#update"
+
+  post "tea/create" => "tea#create", :as => :create
 
   delete "tea/:id" => "tea#destroy"
-
-  post "tea/create" => "tea#create"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

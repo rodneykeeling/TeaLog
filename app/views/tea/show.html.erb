@@ -2,7 +2,7 @@
     <%= image_tag @tea.photo_url %>
     <div class="tea_info">
       Name: <%= @tea.name %><br />
-      Company: <%= @tea.company %><br />
+      Company: <a href="<%= @tea.store_url %>" class="buy_here"><%= @tea.company %></a><br />
       Description: <%= @tea.description %><br />
       Type: <%= @tea.tea_type %><br />
       Rating: <%= @tea.rating %>/100<br />
@@ -10,8 +10,7 @@
       Steep Time: <%= @tea.steep_time %> minutes<br />
       Steep Temperature: <%= @tea.steep_temperature %>&#176;F<br />
     </div>
-    <br />
-    <a href="<%= @tea.store_url %>" class="buy_here">Buy Here</a>
     <br /><br />
+    <span id="edit"><%= link_to 'Edit', "/edit/"+@tea.id.to_s %></span>
     <span id="delete"><%= link_to 'Delete', @tea, :confirm => "Are you sure?", method: :delete %></span>
   </div>

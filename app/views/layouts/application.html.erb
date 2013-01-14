@@ -6,27 +6,6 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= yield :head %>
-  <script type="text/javascript">
-    $("input#term").live("keyup", function() {
-        var term = $(this);
-        var span = $("span#search_highlight");
-        if (term.val().indexOf("type: ") !== -1) {
-            span.text("type:");
-            span.show();
-            term.css("padding-left", "16px");
-            term.css("width", "189px");
-        } else if (term.val().indexOf("name: ") !== -1) {
-            span.text("name:");
-            span.show();
-            term.css("padding-left", "16px");
-            term.css("width", "189px");
-        } else {
-            span.hide();
-            term.css("padding-left", "5px");
-            term.css("width", "200px");
-        }
-    });
-  </script>
 </head>
 <body>
   <header>

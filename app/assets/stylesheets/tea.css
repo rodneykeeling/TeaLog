@@ -417,16 +417,14 @@ input#term {
   right: 0; }
 
 span#search_highlight {
-  background: #b4c09b;
-  color: #444;
-  border: 1px solid #789048;
+  background: #b6c0ac;
+  color: #fff;
   font-size: 16px;
+  border: 1px solid #789048;
   position: absolute;
   top: 10px;
   left: 771px;
+  height: 18px;
   padding: 2px 3px;
   z-index: 4;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
   display: none; }

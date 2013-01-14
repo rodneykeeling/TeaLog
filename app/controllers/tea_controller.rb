@@ -6,12 +6,12 @@ class TeaController < ApplicationController
   end
 
   def show
-    @tea = Tea.find(params[:id])
+    @tea = Tea.find params[:id]
     @title = @tea.name
   end
 
   def create
-    @tea = Tea.new(params[:tea])
+    @tea = Tea.new params[:tea]
     if @tea.save
       redirect_to "/"
     else
@@ -21,8 +21,22 @@ class TeaController < ApplicationController
     @title = 'New Tea'
   end
 
-  def destroy
+  def edit
+    @tea = Tea.find params[:id]
+    @title = "Edit"
+  end
+
+  def update
     @tea = Tea.find(params[:id])
+    if @tea.update_attributes params[:tea]
+      redirect_to tea_path
+    else
+      render action: :edit
+    end
+  end
+
+  def destroy
+    @tea = Tea.find params[:id]
     @tea.destroy
 
     respond_to do |format|

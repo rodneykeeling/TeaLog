@@ -13,3 +13,36 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+
+
+$("input#term").live("keyup", function() {
+    var term = $(this);
+    var span = $("span#search_highlight");
+    if (term.val().indexOf("type: ") !== -1) {
+        span.text("type:");
+        span.show();
+        term.css("padding-left", "16px");
+        term.css("width", "189px");
+    } else if (term.val().indexOf("name: ") !== -1) {
+        span.text("name:");
+        span.show();
+        term.css("padding-left", "16px");
+        term.css("width", "189px");
+    } else if (term.val().indexOf("origin: ") !== -1) {
+        span.text("origin:");
+        span.show();
+        term.css("padding-left", "16px");
+        term.css("width", "189px");
+    } else if (term.val().indexOf("company: ") !== -1) {
+        span.text("company:");
+        span.show();
+        term.css("padding-left", "18px");
+        term.css("width", "187px");
+    } else {
+        span.hide();
+        term.css("padding-left", "5px");
+        term.css("width", "200px");
+    }
+});
+
