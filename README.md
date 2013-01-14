@@ -20,3 +20,7 @@ TeaLog
 #### Next steps
 * Responsive design
 * Uploadable images (currently only supports URLs)
+
+#### More screenshots
+![Screenshot](http://i.imgur.com/Rblhf.png)
+![Screenshot](http://i.imgur.com/NUTwg.png)
