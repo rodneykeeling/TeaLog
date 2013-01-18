@@ -69,12 +69,10 @@ img#logo {
 }
 
 #main {
-  width:980px;
   margin:5px auto;
 }
 
 header {
-  width:980px;
   height:60px;
   margin:5px auto;
   position:relative;
@@ -82,7 +80,6 @@ header {
 }
 
 #border-line {
-  width:980px;
   height:5px;
   margin:10px auto 0 auto;
   background:url('border.png') repeat-x 0 0;
@@ -103,13 +100,11 @@ div#tea-dropdown {
 }
 
 div#new-tea {
-  width:980px;
   margin-bottom:40px;
   display:none;
 }
 
 div#all-teas {
-  width:980px;
   float:left;
   margin-top:20px;
   margin-bottom:120px;
@@ -134,11 +129,6 @@ div.tea_entry {
 margin-bottom:120px;
 }
 
-div.entry img, div.tea_entry img {
-  height:343px;
-  width:459px;
-}
-
 div.entry span.tea_title {
   display:block;
   height:7px;
@@ -160,7 +150,6 @@ footer {
   padding:20px;
   bottom:0;
   height:20px;
-  width:980px;
   background:url('border.png') repeat-x 0 0;
   text-align:center;
 }

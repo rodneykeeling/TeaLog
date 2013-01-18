@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>Tealog | <%= @title %> </title>
+  <%= stylesheet_link_tag    "reset", :media => "all" %>
+  <%= stylesheet_link_tag    "forms", :media => "all" %>
+  <%= stylesheet_link_tag    "responsive", :media => "all" %>
+  <%= stylesheet_link_tag    "typography", :media => "all" %>
   <%= stylesheet_link_tag    "tea", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
