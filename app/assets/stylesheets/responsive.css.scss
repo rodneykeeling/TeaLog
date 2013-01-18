@@ -10,6 +10,7 @@
     width:459px;
   }
 
+  span#search_highlight { left:561px; }
 }
     
 @media only screen and (min-width: 550px) and (max-width: 789px) {
@@ -24,6 +25,7 @@
     width:505px;
   }
 
+  span#search_highlight { left:321px; }
 }
 
 @media only screen and (min-width: 790px) and (max-width: 989px) {
@@ -38,6 +40,7 @@
     width:354px;
   }
 
+  span#search_highlight { left:561px; }
 }
 
 @media only screen and (min-width: 990px) {
@@ -52,4 +55,5 @@
     width:459px;
   }
 
+  span#search_highlight { left:771px; }
 }

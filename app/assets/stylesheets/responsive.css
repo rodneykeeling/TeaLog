@@ -6,7 +6,10 @@
 
   div.entry img, div.tea_entry img {
     height: 343px;
-    width: 459px; } }
+    width: 459px; }
+
+  span#search_highlight {
+    left: 561px; } }
 @media only screen and (min-width: 550px) and (max-width: 789px) {
   /* Single Fixed Width Column */
   #main, header, #border-line, div#new-tea,
@@ -15,7 +18,10 @@
 
   div.entry img, div.tea_entry img {
     height: 388px;
-    width: 505px; } }
+    width: 505px; }
+
+  span#search_highlight {
+    left: 321px; } }
 @media only screen and (min-width: 790px) and (max-width: 989px) {
   /* Two Fixed Width Columns, Medium Padding (iPad) */
   #main, header, #border-line, div#new-tea,
@@ -24,7 +30,10 @@
 
   div.entry img, div.tea_entry img {
     height: 264px;
-    width: 354px; } }
+    width: 354px; }
+
+  span#search_highlight {
+    left: 561px; } }
 @media only screen and (min-width: 990px) {
   /* Two Fixed Width Columns, Large Padding (Desktop) */
   #main, header, #border-line, div#new-tea,
@@ -33,4 +42,7 @@
 
   div.entry img, div.tea_entry img {
     height: 343px;
-    width: 459px; } }
+    width: 459px; }
+
+  span#search_highlight {
+    left: 771px; } }
