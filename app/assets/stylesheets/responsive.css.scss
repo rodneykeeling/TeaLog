@@ -2,15 +2,40 @@
   /* Single Fluid Width Column (iPhone) */
   #main, header, #border-line, div#new-tea,
   div#all-teas, footer {
-    width:980px;
+    width:320px;
   }
 
   div.entry img, div.tea_entry img {
-    height:343px;
-    width:459px;
+    height:242px;
+    width:310px;
   }
 
-  span#search_highlight { left:561px; }
+  span#search_highlight { left:100px; }
+
+  input#term {
+    top:60px;
+    left:0;
+    width:310px;
+    height:30px;
+  }
+
+  div#add-new-tea {
+    margin-top:60px;
+  }
+
+  div#new-tea input[type=text], input[type=url], input[type=range] {
+    clear:both;
+    width:310px;
+    height:30px;
+  }
+
+  div#new-tea textarea {
+    clear:both;
+    width:310px;
+    height:100px;
+  }
+
+  footer { margin-left:-190px; }
 }
     
 @media only screen and (min-width: 550px) and (max-width: 789px) {
@@ -26,6 +51,13 @@
   }
 
   span#search_highlight { left:321px; }
+
+  input#term {
+    top:7px;
+    right:0;
+  }
+
+  footer { margin-left:-290px; }
 }
 
 @media only screen and (min-width: 790px) and (max-width: 989px) {
@@ -41,6 +73,13 @@
   }
 
   span#search_highlight { left:561px; }
+
+  input#term {
+    top:7px;
+    right:0;
+  }
+
+  footer { margin-left:-390px; }
 }
 
 @media only screen and (min-width: 990px) {
@@ -56,4 +95,11 @@
   }
 
   span#search_highlight { left:771px; }
+
+  input#term {
+    top:7px;
+    right:0;
+  }
+
+  footer { margin-left:-490px; }
 }

@@ -116,7 +116,6 @@ div#tea_one, div#tea_two {
 footer {
   position: absolute;
   left: 50%;
-  margin-left: -490px;
   padding: 20px;
   bottom: 0;
   height: 20px;
