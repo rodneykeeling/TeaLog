@@ -44,6 +44,12 @@ class TeaController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def topteas
+    # top 10
+    @tea = Tea.find(:all, order: "rating desc", limit: 10)
+    @title = "Top-rated Teas"
+  end
   
   def search
     term = params[:term]

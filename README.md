@@ -28,7 +28,7 @@ And go to localhost:3000 to begin!
 #### Built with
 * Ruby on Rails
 * MySQL
-* Sass
+* SCSS
 * jQuery
 
 #### Next steps

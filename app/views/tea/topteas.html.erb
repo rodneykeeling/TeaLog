@@ -1,0 +1,13 @@
+<div id="all-teas">
+  <h3>Top-rated Teas</h3>
+  <% @tea.each do |tea| %>
+    <div class="entry">
+      <%= image_tag tea.photo_url %><br />
+      Name: <%= tea.name %><br />
+      Company: <%= tea.company %><br />
+      Type: <%= tea.tea_type %><br />
+      Origin: <%= tea.origin %><br /><br />
+      Rating: <%= tea.rating %><br />
+    </div>
+  <% end %>
+</div>

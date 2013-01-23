@@ -1,8 +1,9 @@
 Tealog::Application.routes.draw do
-  get "/" => "tea#index"
-  get "tea/:id" => "tea#show", :as => :tea
-  get "search/" => "tea#search"
-  get "edit/:id" => "tea#edit"
+  get "/"         => "tea#index"
+  get "tea/:id"   => "tea#show", :as => :tea
+  get "search/"   => "tea#search"
+  get "edit/:id"  => "tea#edit"
+  get "top/"      => "tea#topteas"
 
   put "update/:id" => "tea#update"
 
