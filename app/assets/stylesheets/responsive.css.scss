@@ -10,12 +10,16 @@
     width:310px;
   }
 
-  span#search_highlight { left:100px; }
+  span#search_highlight { 
+    left:5px; 
+    top:65px; 
+    height: 27px
+  }
 
   input#term {
     top:60px;
     left:0;
-    width:310px;
+    width:310px !important;
     height:30px;
   }
 
@@ -50,7 +54,11 @@
     width:505px;
   }
 
-  span#search_highlight { left:321px; }
+  span#search_highlight { 
+    left:321px; 
+    top:10px; 
+    height:18px;
+}
 
   input#term {
     top:7px;
@@ -72,7 +80,11 @@
     width:354px;
   }
 
-  span#search_highlight { left:561px; }
+  span#search_highlight { 
+    left:561px; 
+    top:10px; 
+    height:18px;
+  }
 
   input#term {
     top:7px;
@@ -94,7 +106,11 @@
     width:459px;
   }
 
-  span#search_highlight { left:771px; }
+  span#search_highlight { 
+    left:771px; 
+    top:10px; 
+    height:18px;
+  }
 
   input#term {
     top:7px;

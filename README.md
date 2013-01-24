@@ -34,6 +34,7 @@ And go to localhost:3000 to begin!
 #### Next steps
 * Responsive design
 * Uploadable images (currently only supports URLs)
+* User accounts
 
 #### More screenshots
 ![Screenshot](http://i.imgur.com/Rblhf.png)
