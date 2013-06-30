@@ -32,7 +32,6 @@ And go to localhost:3000 to begin!
 * jQuery
 
 #### Next steps
-* Responsive design
 * Uploadable images (currently only supports URLs)
 * User accounts
 

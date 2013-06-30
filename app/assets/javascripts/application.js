@@ -59,10 +59,10 @@ $("input#term").live("keyup", function() {
         var tea_dropdown = $("#tea-dropdown");
         if (new_tea.is(":hidden")) {
             tea_dropdown.css("background", "url('assets/dropdown-click.png')");
-            new_tea.slideDown('slow');
+            new_tea.slideDown(200);
             $("div#border-line").hide();
         } else {
-            new_tea.slideUp("slow");
+            new_tea.slideUp(200);
             tea_dropdown.css("background", "url('assets/dropdown.png')");
             $("div#border-line").show();
         }

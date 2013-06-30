@@ -154,7 +154,7 @@ footer {
 }
 
 span#search_highlight {
-  background:#b6c0ac;
+  background: $light_green;
   color:#fff;
   font-size:16px;
   border:1px solid $light_green;
@@ -162,4 +162,7 @@ span#search_highlight {
   padding:2px 3px;
   z-index:4;
   display:none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

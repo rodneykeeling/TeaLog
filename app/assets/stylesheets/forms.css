@@ -6,14 +6,20 @@ input[type=text], input[type=url], input[type=range] {
   height: 18px;
   padding: 5px;
   margin-bottom: 10px;
-  border: 1px solid #e8e8e8; }
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
 textarea {
   width: 200px;
   height: 130px;
   padding: 5px;
   margin-bottom: 10px;
-  border: 1px solid #e8e8e8; }
+  border: 1px solid #e8e8e8;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
 select {
   width: 210px;
@@ -23,9 +29,9 @@ select {
   background: url("downarrow.png") 190px 50% no-repeat white;
   border: 1px solid #e8e8e8;
   -webkit-appearance: none;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px; }
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px; }
 
 input[type=submit] {
   width: 70px;
